@@ -6,7 +6,8 @@ export const theme = extendTheme({
             "900": "#FFBA08",
         },
         dark: {
-            "900": "#47585B"
+            "900": "#47585B",
+            "info": "#999999"
         },
         light: {
             "100":"#DADADA", 
