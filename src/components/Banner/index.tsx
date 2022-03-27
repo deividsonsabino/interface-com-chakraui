@@ -11,7 +11,6 @@ export function Banner() {
 
         <Flex
             flexDirection={{ sm: "column", lg: "row" }}
-            as="div"
             width="full"
             justifyContent={{base:"center",md:"center", lg:"space-between"}}
             mx="auto"
@@ -19,7 +18,7 @@ export function Banner() {
             py={{base:"1.75rem", md:"1.75rem", lg:"0"}}
             align={{md:"center"}}
             color="light.50"
-            style={{ background: `url(images/background.png)` }}
+            backgroundImage={"images/background.png"}
         >
             <Box
                 as="div"
