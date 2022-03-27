@@ -7,6 +7,20 @@ import { Travel } from '../components/Travel'
 
 
 const Home: NextPage = () => {
+  const continents = [
+    {
+      name:"Europa",
+      description:"O continent mais antigo",
+      href:"/continent",
+      image:"images/europa.png"
+    },
+    {
+      name:"Ásia",
+      description:"O continent mais antigo",
+      href:"/continent",
+      image:"images/asia.jpg"
+    },
+  ]
   return (
     <Box
       w="full"
@@ -16,7 +30,7 @@ const Home: NextPage = () => {
       <Header />
       <Banner />
       <Travel />
-      <ContinentsSlide />
+      <ContinentsSlide continents={continents} />
     </Box>
   )
 }

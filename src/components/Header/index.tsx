@@ -1,5 +1,7 @@
-import { Flex, Link } from "@chakra-ui/react";
+import { Flex } from "@chakra-ui/react";
+import Link from 'next/link'
 import { useRouter } from "next/router";
+import { ChevronLeftIcon } from '@chakra-ui/icons'
 
 export function Header() {
     const router = useRouter();
@@ -12,9 +14,14 @@ export function Header() {
         >
             {
                 router.asPath !== '/' && (
-                    <Link
-                        ml="8.75rem"
-                    > voltar </Link>
+                    <Link href="/">
+                        <a>
+                            <ChevronLeftIcon
+                                _hover={{ cursorTo: "pointer" }}
+                                ml="8.75rem"
+                            />
+                        </a>
+                    </Link>
                 )
             }
 

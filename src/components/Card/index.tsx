@@ -1,9 +1,18 @@
-import { Box, Flex, Text } from "@chakra-ui/react";
+import { Box, Flex, Text, Img } from "@chakra-ui/react";
 
-export function Card() {
+interface CardProps {
+    city: string;
+    country: string;
+    image:string;
+    flag: string;
+}
+
+export function Card({ city, country, image, flag }: CardProps) {
     return (
         <Box>
-            <img src="images/londres.png" />
+            <Img 
+                src={image} 
+            />
             <Flex
                 justifyContent="space-between"
                 p="1rem"
@@ -21,18 +30,18 @@ export function Card() {
                         color="dark.900"
                         fontWeight="600"
                     >
-                        Londres
+                        {city}
                     </Text>
                     <Text
                         fontSize="1rem"
                         color="dark.info"
                         fontWeight="500"
                     >
-                        Reino Unido
+                        {country}
                     </Text>
                 </Box>
                 <Flex>
-                    <img src="images/logo-reino-unido.png" />
+                    <img src={flag} />
                 </Flex>
             </Flex>
         </Box>
